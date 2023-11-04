@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Beach Workers</title>
+</head>
+<body>
+    <h1>Beach Workers</h1>
+    <form method="post" action="/add_worker">
+        <label for="name">Name:</label>
+        <input type="text" name="name" required>
+        <br>
+        <label for="occupation">Occupation:</label>
+        <input type="text" name="occupation" required>
+        <br>
+        <label for="address">Address:</label>
+        <input type="text" name="address" required>
+        <br>
+        <button type="submit">Add Worker</button>
+    </form>
+    <h2>Workers:</h2>
+    <ul>
+        {% for worker in workers %}
+            <li>{{ worker.name }} - {{ worker.occupation }} - {{ worker.address }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
+
