@@ -5,6 +5,5 @@ def print_column(height):
 
     for _ in range(height):
         print("#")
-
 main()
 
